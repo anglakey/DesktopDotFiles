@@ -1,0 +1,19 @@
+--- dmenu.c
++++ dmenu.c
+@@ -33,6 +34,7 @@ struct item {
+ 	char *text;
+ 	struct item *left, *right;
+ 	int out;
++	double distance;
+ };
+ 
+ static char text[BUFSIZ] = "";
+@@ -788,6 +875,8 @@ main(int argc, char *argv[])
+ 			topbar = 0;
+ 		else if (!strcmp(argv[i], "-f"))   /* grabs keyboard before reading stdin */
+ 			fast = 1;
++		else if (!strcmp(argv[i], "-F"))   /* grabs keyboard before reading stdin */
++			fuzzy = 0;
+ 		else if (!strcmp(argv[i], "-i")) { /* case-insensitive item matching */
+ 			fstrncmp = strncasecmp;
+ 			fstrstr = cistrstr;
