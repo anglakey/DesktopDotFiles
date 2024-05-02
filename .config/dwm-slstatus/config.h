@@ -14,7 +14,7 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10", "twemoji:pixelsize=14:antialias=true:autohint=true","JoyPixels:pixelsize=14:antialias=true:autohint=true" "ttf-weather-icons:pixelsize=14:antialias=true:autohint=true" };
-static const char *dmenufont[]          = { "monospace:size=8", "twemoji:pixelsize=14:antialias=true:autohint=true","JoyPixels:pixelsize=14:antialias=true:autohint=true" "ttf-weather-icons:pixelsize=14:antialias=true:autohint=true" };
+static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -39,8 +39,9 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Steam",   NULL,        NULL,     4,            1,            0 },
 	{ "Steam",    NULL,    "Steam",	      4,            0,            0 },
-	{ "Steam",    "steamwebhelper",    NULL,	      4,            0,            0 },\
-	{ "YouTube Music", "youtube music", NULL,        1<<4,            0, 			  -1},
+        { "steam",    "steamwebhelper",    "Friends List",           4,            0,            0 },
+	{ "steam",    "steamwebhelper",    "Steam",	      4,            0,            0 },
+	{ "Sonixd", "sonixd", NULL,        1<<4,            0, 			  -1},
 	{ "net-runelite-launcher-Launcher", "net-runelite-launcher-Launcher", NULL, 0, 1, -1},
 	{ "net-runelite-client-RuneLite", "net-runelite-client-RuneLite", "RuneLite", 0, 0, -1},
 	{ "net-runelite-client-RuneLite", "net-runelite-client-RuneLite", "RuneLite Launcher", 0, 1, -1},
